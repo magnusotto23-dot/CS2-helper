@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,40 +16,55 @@
     }
 
     header {
-      background: #161b22;
-      padding: 25px;
-    }
-
-    h1 {
-      margin: 0;
+      padding: 30px 15px;
     }
 
     .container {
-      padding: 25px;
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
     }
 
     .card {
       background: #161b22;
       border: 1px solid #30363d;
-      border-radius: 15px;
-      padding: 25px;
-      margin: 20px auto;
-      max-width: 500px;
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 20px;
     }
 
     button {
-      background: #238636;
+      background: #3fb950;
       color: white;
       border: none;
-      border-radius: 10px;
-      padding: 15px 25px;
-      font-size: 17px;
+      border-radius: 12px;
+      padding: 15px 30px;
+      font-size: 18px;
       font-weight: bold;
-      margin: 8px;
+      cursor: pointer;
+      margin-top: 15px;
     }
 
     button:hover {
       opacity: 0.8;
+    }
+
+    #message {
+      margin-top: 25px;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     a {
@@ -60,38 +76,55 @@
 
 <body>
 
-<header>
-  <h1>🎯 AIM TRAINER</h1>
-  <p>Bliv bedre til dit aim i CS2</p>
-</header>
+  <header>
+    <h1>🎯 AIM TRAINER</h1>
+    <p>Bliv bedre til dit aim i CS2</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-  <div class="card">
-    <h2>AK-47</h2>
-    <p>Træn din crosshair placement og flicks.</
-      <button onclick="startTraining('AK-47')">Start træning</button>
+    <div class="card">
+      <h2>AK-47</h2>
+      <p>Træn din crosshair placement og flicks.</p>
+      <button onclick="startTraining('AK-47')">
+        Start træning
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>M4A1-S / M4A4</h2>
+      <p>Arbejd med spray control og præcision.</p>
+      <button onclick="startTraining('M4A4')">
+        Start træning
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>AWP</h2>
+      <p>Træn flicks, reaction time og quick-scoping.</p>
+      <button onclick="startTraining('AWP')">
+        Start træning
+      </button>
+    </div>
+
+    <div id="message">
+      Vælg et våben for at starte.
+    </div>
+
+    <br>
+
+    <a href="index.html">
+      <button>← Tilbage til forsiden</button>
+    </a>
+
   </div>
 
-  <div class="card">
-    <h2>M4A1-S / M4A4</h2>
-    <p>Arbejd med spray control og præcision.</p>
-    <button>Start træning</button>
-  </div>
-
-  <div class="card">
-    <h2>AWP</h2>
-    <p>Træn flicks, reaction time og quick-scoping.</p>
-    <button>Start træning</button>
-  </div>
-
-  <br>
-
-  <a href="index.html">
-    <button>← Tilbage til forsiden</button>
-  </a>
-
-</div>
+  <script>
+    function startTraining(weapon) {
+      document.getElementById("message").innerHTML =
+        "🔥 " + weapon + " træning startet!";
+    }
+  </script>
 
 </body>
 </html>
